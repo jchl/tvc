@@ -1,0 +1,27 @@
+To build tvc:
+
+1.  Edit vars.sh to set the following paths:
+
+    CSEMDIR: The path to the csem root directory, containing the csem executable plus the corelib, _coq and _ocaml_generated subdirectories.
+    CLANGDIR: The path to the clang executable.
+    LLVMDIR: The path to the LLVM 3.0 install directory, containing the extended OCaml bindings in the lib/ocaml subdirectory.
+    VELLVMDIR: The path to the Vellvm root directory, containing the Vellvm and Extraction subdirectories.
+    EXTRALIBSDIR: The path to the Vellvm extralibs directory, containing the Coq-Equations and metatheory_8.4 subdirectories.
+    CSMITHDIR: The path to the csmith root directory; the csmith executable is expected to be found in the src subdirectory.
+    LEMDIR: The path to the lem root directory, containing the coq-lib subdirectory.
+
+2.  Build csem (including the coq target) and Vellvm.
+
+3.  Make sure that ocamlc.opt is in your path.
+
+3.  Run ./make.sh.
+
+
+To run the tvc tests:
+
+-   ./test.sh to run the non-random tests
+-   ./test-csmith.sh [<num>] to run <num> (defaulting to 5) csmith-generated tests
+-   ./test-random.sh [<num>] to run <num> (defaulting to 5) tests generated using our own random test case generator.
+
+
+Good luck with all the dependencies!

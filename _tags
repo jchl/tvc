@@ -1,0 +1,2 @@
+<src/*.ml>: warn_error_A
+<src/*.ml>: annot
